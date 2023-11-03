@@ -1,0 +1,19 @@
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+/Users/oyeniyikenny/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-9pghvn sitelibdir\=./.gem.20231102-92011-9pghvn clean
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-9pghvn sitelibdir\=./.gem.20231102-92011-9pghvn
+compiling debug.c
+compiling iseq_collector.c
+linking shared-object debug/debug.bundle
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-9pghvn sitelibdir\=./.gem.20231102-92011-9pghvn install
+/usr/local/bin/ginstall -c -m 0755 debug.bundle ./.gem.20231102-92011-9pghvn/debug
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/debug-1.8.0/ext/debug
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-9pghvn sitelibdir\=./.gem.20231102-92011-9pghvn clean

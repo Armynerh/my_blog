@@ -1,0 +1,18 @@
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/stringio-3.0.8/ext/stringio
+/Users/oyeniyikenny/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/stringio-3.0.8/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-oxuwqh sitelibdir\=./.gem.20231102-92011-oxuwqh clean
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/stringio-3.0.8/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-oxuwqh sitelibdir\=./.gem.20231102-92011-oxuwqh
+compiling stringio.c
+linking shared-object stringio.bundle
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/stringio-3.0.8/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-oxuwqh sitelibdir\=./.gem.20231102-92011-oxuwqh install
+/usr/local/bin/ginstall -c -m 0755 stringio.bundle ./.gem.20231102-92011-oxuwqh
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/stringio-3.0.8/ext/stringio
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-oxuwqh sitelibdir\=./.gem.20231102-92011-oxuwqh clean

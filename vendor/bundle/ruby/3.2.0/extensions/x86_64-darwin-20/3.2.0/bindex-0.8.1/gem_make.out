@@ -1,0 +1,18 @@
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+/Users/oyeniyikenny/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-cib84u sitelibdir\=./.gem.20231102-92011-cib84u clean
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-cib84u sitelibdir\=./.gem.20231102-92011-cib84u
+compiling cruby.c
+linking shared-object skiptrace/internal/cruby.bundle
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-cib84u sitelibdir\=./.gem.20231102-92011-cib84u install
+/usr/local/bin/ginstall -c -m 0755 cruby.bundle ./.gem.20231102-92011-cib84u/skiptrace/internal
+
+current directory: /Users/oyeniyikenny/Desktop/Microverse/my_blog/vendor/bundle/ruby/3.2.0/gems/bindex-0.8.1/ext/skiptrace
+make DESTDIR\= sitearchdir\=./.gem.20231102-92011-cib84u sitelibdir\=./.gem.20231102-92011-cib84u clean
