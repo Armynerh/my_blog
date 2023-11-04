@@ -8,5 +8,4 @@ RSpec.describe Like, type: :model do
   it 'belongs to a post' do
     should belong_to(:post)
   end
-
 end

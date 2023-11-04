@@ -17,7 +17,6 @@ RSpec.describe Post, type: :model do
     should validate_numericality_of(:likes_counter).is_greater_than_or_equal_to(0).only_integer
   end
 
-
   it 'has many likes' do
     should have_many(:likes)
   end
@@ -25,5 +24,4 @@ RSpec.describe Post, type: :model do
   it 'has many comments' do
     should have_many(:comments)
   end
-
 end
