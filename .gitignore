@@ -39,3 +39,4 @@ node_modules/
 .ruby-version
 /yarn-error.log
 /test-reports/
+tmp/cache/bootsnap/compile-cache-iseq 
