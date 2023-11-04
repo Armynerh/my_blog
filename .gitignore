@@ -6,7 +6,7 @@
 
 # Ignore bundler config.
 /.bundle
-/vendor/bundle
+
 
 # Ignore all environment files (except templates).
 /.env*
@@ -39,4 +39,3 @@ node_modules/
 .ruby-version
 /yarn-error.log
 /test-reports/
-Gemfile.lock
