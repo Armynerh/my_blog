@@ -7,6 +7,7 @@
 # Ignore bundler config.
 /.bundle
 
+
 # Ignore all environment files (except templates).
 /.env*
 !/.env*.erb
@@ -33,4 +34,9 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+config/initializers/secret_token.rb
 node_modules/
+.ruby-version
+/yarn-error.log
+/test-reports/
+tmp/cache/bootsnap/compile-cache-iseq 
