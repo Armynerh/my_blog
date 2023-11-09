@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index, :show] do
     resources :posts, only: [:index]
   end
-  resources :posts, only: [:show]
+  resources :posts, only: [:show], as: 'user_post'
   # Defines the root path route ("/")
   # root "posts#index"
 end
