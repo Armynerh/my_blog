@@ -1,0 +1,22 @@
+current directory: /Users/oyeniyikenny/Desktop/my_blog/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.17.0/ext/bootsnap
+/Users/oyeniyikenny/.rbenv/versions/3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/oyeniyikenny/Desktop/my_blog/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231104-36348-lbemto sitelibdir\=./.gem.20231104-36348-lbemto clean
+
+current directory: /Users/oyeniyikenny/Desktop/my_blog/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231104-36348-lbemto sitelibdir\=./.gem.20231104-36348-lbemto
+compiling bootsnap.c
+bootsnap.c:822:10: warning: unused variable 'contents' [-Wunused-variable]
+  char * contents = NULL;
+         ^
+1 warning generated.
+linking shared-object bootsnap/bootsnap.bundle
+
+current directory: /Users/oyeniyikenny/Desktop/my_blog/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231104-36348-lbemto sitelibdir\=./.gem.20231104-36348-lbemto install
+/usr/local/bin/ginstall -c -m 0755 bootsnap.bundle ./.gem.20231104-36348-lbemto/bootsnap
+
+current directory: /Users/oyeniyikenny/Desktop/my_blog/vendor/bundle/ruby/3.2.0/gems/bootsnap-1.17.0/ext/bootsnap
+make DESTDIR\= sitearchdir\=./.gem.20231104-36348-lbemto sitelibdir\=./.gem.20231104-36348-lbemto clean
