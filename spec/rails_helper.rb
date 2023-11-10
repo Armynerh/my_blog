@@ -66,6 +66,7 @@ end
 require 'rails_helper'
 require 'factory_bot_rails'
 require 'shoulda/matchers'
+require 'rails-controller-testing'
 
 Shoulda::Matchers.configure do |config|
   config.integrate do |with|
