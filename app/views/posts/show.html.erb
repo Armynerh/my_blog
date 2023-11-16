@@ -18,7 +18,7 @@
   <% @post.comments.each do |comment| %>
     <div class="comment">
       <p><strong>Username:</strong> <%= comment.user.name %></p>
-      <p><%= comment.content %></p>
+      <p><%= comment.text %></p>
     </div>
   <% end %>
 </div>
