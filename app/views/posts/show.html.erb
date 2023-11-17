@@ -14,8 +14,8 @@
 </div>
 
 <div class="comments-section">
-  <h3>Comments</h3>
-  <% @post.comments.each do |comment| %>
+  <h3>All Comments</h3>
+  <% @comments.each do |comment| %>
     <div class="comment">
       <p><strong>Username:</strong> <%= comment.user.name %></p>
       <p><%= comment.text %></p>
