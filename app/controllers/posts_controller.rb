@@ -1,6 +1,6 @@
 # posts_controller.rb
 class PostsController < ApplicationController
-  before_action :current_user, only: [:new, :create]
+  before_action :current_user, only: %i[new create]
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:author, :comments)
@@ -28,7 +28,6 @@ class PostsController < ApplicationController
       render :new
     end
   end
-  
 
   private
 

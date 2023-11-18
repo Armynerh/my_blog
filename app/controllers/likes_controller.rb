@@ -4,9 +4,9 @@ class LikesController < ApplicationController
     @like = @post.likes.new(user: current_user)
 
     if @like.save
-      redirect_to user_post_path(@post.author, @post), notice: "Like added successfully."
+      redirect_to user_post_path(@post.author, @post), notice: 'Like added successfully.'
     else
-      redirect_to user_post_path(@post.author, @post), alert: "Error adding like."
+      redirect_to user_post_path(@post.author, @post), alert: 'Error adding like.'
     end
   end
 end
