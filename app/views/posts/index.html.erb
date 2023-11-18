@@ -1,7 +1,5 @@
 <!-- app/views/posts/index.html.erb -->
 
-<h1>Posts</h1>
-
 <% @posts.each do |post| %>
   <div class="post">
     <div class="post-header">
@@ -34,3 +32,11 @@
 <% end %>
 
 <%= link_to "Back to Users", users_path %>
+
+
+  <%= link_to "Create New Post", new_user_post_path(@user) %>
+  <%# Assuming @posts is defined in the controller %>
+  <% if @posts.any? %>
+    <%= link_to "Create New Comment", new_user_post_comment_path(@user, @posts.first) %>
+  <% end %>
+

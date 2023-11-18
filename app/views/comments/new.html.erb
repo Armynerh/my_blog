@@ -1,0 +1,11 @@
+<!-- app/views/comments/new.html.erb -->
+<%= form_with(model: [@user, @post, Comment.new], url: user_post_comments_path(@user, @post), method: :post) do |form| %>
+  <div>
+    <%= form.label :text %>
+    <%= form.text_area :text %>
+  </div>
+
+  <!-- Additional form fields go here -->
+
+  <%= form.submit "Create Comment" %>
+<% end %>
