@@ -5,7 +5,7 @@ require 'rails_helper'
 RSpec.feature 'Post Show Page' do
   let(:user) { create(:user, name: 'John Doe') }
   let(:post) { create(:post, title: 'Test Post', author: user, comments_counter: 2, likes_counter: 3) }
-  let!(:comments) { create_list(:comment, 2, post: post) }
+  let!(:comments) { create_list(:comment, 2, post:) }
 
   scenario 'displays post details and comments' do
     visit user_post_path(post.author, post)

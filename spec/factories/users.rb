@@ -1,12 +1,11 @@
 FactoryBot.define do
   factory :user do
     name { 'John Doe' }
-    sequence(:id) { |n| n } #
-    # other attributes for user
+    sequence(:id) { |n| n }
 
     factory :user_with_posts do
       transient do
-        posts_count { 5 } # Adjust the number of posts as needed
+        posts_count { 5 }
       end
 
       after(:create) do |user, evaluator|
