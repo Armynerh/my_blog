@@ -30,4 +30,3 @@ RSpec.feature 'Post Show Page' do
     expect(current_path).to eq(user_posts_path(post.author))
   end
 end
-
