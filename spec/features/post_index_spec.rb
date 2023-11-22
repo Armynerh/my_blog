@@ -29,4 +29,3 @@ RSpec.describe 'Post Index Page', type: :feature do
     expect(page).to have_selector('.pagination')
   end
 end
-
