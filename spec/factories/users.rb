@@ -1,24 +1,32 @@
-# spec/factories/users.rb
 FactoryBot.define do
   factory :user do
-    name { 'Emily Roberts' }
-    sequence(:id) { |n| n } # Use a sequence for unique IDs
+    name { 'John Doe' }
+    sequence(:id) { |n| n } #
+    # other attributes for user
+
+    factory :user_with_posts do
+      transient do
+        posts_count { 5 } # Adjust the number of posts as needed
+      end
+
+      after(:create) do |user, evaluator|
+        create_list(:post, evaluator.posts_count, author: user)
+      end
+    end
+  end
+
+  factory :post do
+    title { 'First Post' }
+    text { 'Post body 1' }
+    likes_counter { 3 }
+    comments_counter { 2 }
+    association :author, factory: :user
   end
 end
-
-# spec/factories/posts.rb
 FactoryBot.define do
-  factory :post do
-    title { 'Sample Title' }
-    text { 'Sample Text' }
-    sequence(:id) { |n| n } # Use a sequence for unique IDs
-    comments_counter { 1 }
-    likes_counter { 0 }
-    author_id { 1 }
-    created_at { '2020-02-02' } # Use a valid date format
-    updated_at { '2020-02-02' } # Use a valid date format
-    association :user, factory: :user
-
-    # other post attributes
+  factory :comment do
+    user
+    post
+    text { 'This is a comment.' }
   end
 end
