@@ -48,7 +48,7 @@ RSpec.configure do |config|
   #
   # You can disable this behaviour by removing the line below, and instead
   # explicitly tag your specs with their type, e.g.:
-  #
+  config.include FactoryBot::Syntax::Methods
   #     RSpec.describe UsersController, type: :controller do
   #       # ...
   #     end
@@ -74,3 +74,5 @@ Shoulda::Matchers.configure do |config|
     with.library :rails
   end
 end
+
+Dir[Rails.root.join('spec', 'support', '**', '*.rb')].each { |f| require f }

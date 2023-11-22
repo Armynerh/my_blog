@@ -21,7 +21,11 @@
         <p>Number of Comments: <%= post.comments_counter %></p>
       <% end %>
 
-      <%= button_to "Like", user_post_likes_path(post.author, post), method: :post, remote: true %>
+       
+          <%= button_to "Like", user_post_likes_path(@user, post), method: :post, remote: true %>
+      
+    
+    
     </div>
 
     <div class="comments-section">
