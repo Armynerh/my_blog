@@ -4,20 +4,20 @@ RSpec.describe 'Users', type: :request do
   describe 'GET /index' do
     it 'returns http success, renders correct template and right body of text' do
       get '/users'
-      expect(response.body).to include('Here is a list of all Users')
-
+      expect(response.body).to include('All Users')
       expect(response.status).to eq(200)
-
       expect(response).to render_template(:index)
     end
   end
-  describe 'GET /index' do
+
+  describe 'GET /show' do
     it 'returns http success, renders correct template and right body of text' do
-      get '/users/:id'
-      expect(response.body).to include('User 1 profile')
+      # Assuming you have a user with ID 1, adjust this ID accordingly
+      user = FactoryBot.create(:user, name: 'Tom')
 
+      get "/users/#{user.id}"
+      expect(response.body).to include('Tom')
       expect(response.status).to eq(200)
-
       expect(response).to render_template(:show)
     end
   end

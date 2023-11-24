@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :current_user, only: %i[new create]
   def index
     @user = User.find(params[:user_id])
-    @posts = @user.posts.includes(:author, :comments)
+    @posts = @user.posts.includes(:author, :comments).page(params[:page]).per(10)
   end
 
   def show
