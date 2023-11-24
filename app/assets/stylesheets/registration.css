@@ -1,0 +1,29 @@
+/* app/assets/stylesheets/styles.css */
+
+.new_user {
+  display: flex;
+  flex-direction: column; /* Center the form horizontally */
+  align-items: center;
+  text-align: center;
+}
+
+.field {
+  width: 70%;
+  margin: 0;
+  padding: 0;
+}
+
+.sing-input,
+.actions {
+  width: 70%;
+  margin: 5px;
+  height: 40px;
+}
+
+.btn {
+  margin-top: 15px;
+  width: 70%;
+  height: 40px;
+}
+
+/* Add more styles as needed */
