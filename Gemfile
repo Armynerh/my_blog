@@ -67,3 +67,5 @@ group :development do
     gem 'selenium-webdriver'
   end
 end
+
+gem 'devise', '~> 4.9'

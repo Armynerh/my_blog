@@ -1,5 +1,4 @@
 # spec/features/post_show_spec.rb
-
 require 'rails_helper'
 
 RSpec.feature 'Post Show Page' do

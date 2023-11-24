@@ -1,6 +1,6 @@
 # app/controllers/comments_controller.rb
 class CommentsController < ApplicationController
-  before_action :current_user, only: %i[new create]
+  before_action :set_user, only: %i[new create]
 
   def new
     @post = Post.find(params[:post_id])
@@ -22,5 +22,9 @@ class CommentsController < ApplicationController
 
   def comment_params
     params.require(:comment).permit(:text)
+  end
+
+  def set_user
+    @user = current_user
   end
 end

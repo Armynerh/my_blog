@@ -1,6 +1,14 @@
 <!-- app/views/users/show.html.erb -->
 
+
+<div class="top">
 <h1><%= @user.name %></h1>
+<div>
+<% if user_signed_in? %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <% end %>
+</div>
+</div>
 
 <div class="user-profile">
   <div class="user-details">
