@@ -1,0 +1,26 @@
+<!-- app/views/posts/show.html.erb -->
+
+<h1><%= @post.title %></h1>
+
+<div class="post-details">
+  <p><strong>Post by:</strong> <%= @post.author.name %></p>
+  <p><strong>Comments:</strong> <%= @post.comments_counter %></p>
+  <p><strong>Likes:</strong> <%= @post.likes_counter %></p>
+</div>
+
+<div class="post-content">
+  <h2>Post Content</h2>
+  <p><%= @post.text %></p>
+</div>
+
+<div class="comments-section">
+  <h3>All Comments</h3>
+  <% @comments.each do |comment| %>
+    <div class="comment">
+      <p><strong>Username:</strong> <%= comment.user.name %></p>
+      <p><%= comment.text %></p>
+    </div>
+  <% end %>
+</div>
+
+<%= link_to "Back to Posts", user_posts_path(@post.author) %>

@@ -1,0 +1,35 @@
+<!-- app/views/users/index.html.erb -->
+
+
+<div class="top">
+<h1>All Users</h1>
+<div>
+<% if user_signed_in? %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <% end %>
+</div>
+</div>
+
+<div class="user-list">
+  <% @users.each do |user| %>
+    <div class="user-card">
+      <%= link_to user_path(user) do %>
+        <div class="user-picture">
+          <% if user.photo.present? %>
+            <%= image_tag user.photo, alt: "User Photo" %>
+          <% else %>
+            <div class="placeholder">No Photo Available</div>
+          <% end %>
+        </div>
+        <div class="user-info">
+          <div class="username-box">
+            <p><%= user.name %></p>
+          </div>
+          <div class="post-count">
+            <%= pluralize(user.posts.count, "post") %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  <% end %>
+</div>

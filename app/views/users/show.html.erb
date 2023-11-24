@@ -1,0 +1,49 @@
+<!-- app/views/users/show.html.erb -->
+
+
+<div class="top">
+<h1><%= @user.name %></h1>
+<div>
+<% if user_signed_in? %>
+    <%= link_to 'Logout', destroy_user_session_path, method: :delete %>
+  <% end %>
+</div>
+</div>
+
+<div class="user-profile">
+  <div class="user-details">
+    <% if @user.photo.present? %>
+      <%= image_tag @user.photo, alt: "User Photo" %>
+    <% else %>
+      <p>No Photo Available</p>
+    <% end %>
+    <p>Number of Posts: <%= @user.posts_counter %></p>
+  </div>
+
+  <div class="user-bio">
+    <p><%= @user.bio %></p>
+  </div>
+</div>
+
+<div class="user-posts">
+  <% if @recent_posts.empty? %>
+    <p>No recent posts available.</p>
+
+    <%= link_to "Create New Post", new_user_post_path(@user) %>
+  <% else %>
+    <% @recent_posts.each do |post| %>
+      <div class="post">
+        <h2><%= post.title %></h2>
+        <p><%= post.text.truncate(200, separator: ' ') %></p>
+        <p>Number of Comments: <%= post.comments_counter %></p>
+        <p>Number of Likes: <%= post.likes_counter %></p>
+      </div>
+    <% end %>
+
+    <% if @recent_posts.size < 4 %>
+      <%= link_to "Create New Post", new_user_post_path(@user) %>
+    <% end %>
+
+    <%= link_to "See All Posts", user_posts_path(@user) %>
+  <% end %>
+</div>

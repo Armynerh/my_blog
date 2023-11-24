@@ -1,0 +1,41 @@
+<% @posts.each do |post| %>
+  <div class="post">
+    <div class="post-header">
+      <div class="user-details">
+        <% if post.author.photo.present? %>
+          <%= image_tag post.author.photo, alt: "User Photo" %>
+        <% else %>
+          <p>Photo not available</p>
+        <% end %>
+        <p><%= post.author.name %></p>
+      </div>
+    </div>
+
+    <div class="post-details">
+      <%= link_to user_post_path(post.author, post) do %>
+        <h2><%= post.title %></h2>
+        <p><%= post.text %></p>
+        <p>Number of Likes: <%= post.likes_counter %></p>
+        <p>Number of Comments: <%= post.comments_counter %></p>
+      <% end %>
+
+      <%= button_to "Like", user_post_likes_path(@user, post), method: :post, remote: true %>
+    </div>
+
+    <div class="comments-section">
+      <h3>Comments</h3>
+      <% post.recent_comments.each do |comment| %>
+        <p><strong><%= comment.user.name %>:</strong> <%= comment.text %></p>
+      <% end %>
+
+      <%= link_to "Create New Comment", new_user_post_comment_path(@user, post) %>
+    </div>
+  </div>
+<% end %>
+<div class="pagination">
+<%= paginate @posts %>
+</div>
+
+
+<%= link_to "Back to Users", users_path %>
+<%= link_to "Create New Post", new_user_post_path(@user) %>
