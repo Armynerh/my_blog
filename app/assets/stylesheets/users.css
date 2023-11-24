@@ -35,8 +35,6 @@
   margin-top: 5px;
 }
 
-/* app/assets/stylesheets/users.css */
-
 .user-profile {
   display: flex;
   justify-content: space-around;
@@ -74,4 +72,9 @@
 
 .post h2 {
   margin-bottom: 10px;
+}
+
+.top {
+  display: flex;
+  justify-content: space-between;
 }

@@ -1,6 +1,7 @@
-# posts_controller.rb
 class PostsController < ApplicationController
-  before_action :current_user, only: %i[new create]
+  before_action :authenticate_user!, only: %i[new create]
+  before_action :set_user, only: %i[new create]
+
   def index
     @user = User.find(params[:user_id])
     @posts = @user.posts.includes(:author, :comments).page(params[:page]).per(10)
@@ -12,8 +13,7 @@ class PostsController < ApplicationController
   end
 
   def new
-    @post = Post.new
-    @user = current_user
+    @post = @user.posts.new
   end
 
   def create
@@ -24,12 +24,15 @@ class PostsController < ApplicationController
       redirect_to user_posts_path(@user)
     else
       flash.now[:error] = 'Failed to create the post.'
-      Rails.logger.debug @post.errors.inspect
       render :new
     end
   end
 
   private
+
+  def set_user
+    @user = current_user
+  end
 
   def post_params
     params.require(:post).permit(:title, :text)
