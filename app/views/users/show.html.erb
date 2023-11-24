@@ -18,20 +18,24 @@
 </div>
 
 <div class="user-posts">
-  <% @recent_posts.each do |post| %>
-    <div class="post">
-      <h2><%= post.title %></h2>
-      <p><%= post.text.truncate(200, separator: ' ') %></p>
-      <p>Number of Comments: <%= post.comments_counter %></p>
-      <p>Number of Likes: <%= post.likes_counter %></p>
-    </div>
-  <% end %>
-
-  <% if @recent_posts.size < @all_posts.size %>
-    <%= link_to "See All Posts", user_posts_path(@user) %>
-  <% end %>
-
   <% if @recent_posts.empty? %>
     <p>No recent posts available.</p>
+
+    <%= link_to "Create New Post", new_user_post_path(@user) %>
+  <% else %>
+    <% @recent_posts.each do |post| %>
+      <div class="post">
+        <h2><%= post.title %></h2>
+        <p><%= post.text.truncate(200, separator: ' ') %></p>
+        <p>Number of Comments: <%= post.comments_counter %></p>
+        <p>Number of Likes: <%= post.likes_counter %></p>
+      </div>
+    <% end %>
+
+    <% if @recent_posts.size < 4 %>
+      <%= link_to "Create New Post", new_user_post_path(@user) %>
+    <% end %>
+
+    <%= link_to "See All Posts", user_posts_path(@user) %>
   <% end %>
 </div>

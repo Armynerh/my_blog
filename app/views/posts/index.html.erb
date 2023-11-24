@@ -1,7 +1,5 @@
 <!-- app/views/posts/index.html.erb -->
 
-<h1>Posts</h1>
-
 <% @posts.each do |post| %>
   <div class="post">
     <div class="post-header">
@@ -22,6 +20,12 @@
         <p>Number of Likes: <%= post.likes_counter %></p>
         <p>Number of Comments: <%= post.comments_counter %></p>
       <% end %>
+
+       
+          <%= button_to "Like", user_post_likes_path(@user, post), method: :post, remote: true %>
+      
+    
+    
     </div>
 
     <div class="comments-section">
@@ -29,8 +33,11 @@
       <% post.recent_comments.each do |comment| %>
         <p><strong><%= comment.user.name %>:</strong> <%= comment.text %></p>
       <% end %>
+
+      <%= link_to "Create New Comment", new_user_post_comment_path(@user, post) %>
     </div>
   </div>
 <% end %>
 
 <%= link_to "Back to Users", users_path %>
+<%= link_to "Create New Post", new_user_post_path(@user) %>
